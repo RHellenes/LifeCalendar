@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
-  modules: ['@nuxt/ui', '@nuxt/eslint', '@nuxt/fonts', '@vueuse/nuxt'],
+  modules: ['@nuxt/ui', '@nuxt/eslint', '@nuxt/fonts', '@vueuse/nuxt', '@nuxthub/core', '@nuxthub/core'],
   ui: {
     icons: ['heroicons', 'simple-icons'],
     safelistColors: ['primary', 'red', 'orange', 'green']
@@ -20,7 +20,16 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4
   },
-
+  hub: {
+    // NuxtHub options
+    database: true,
+    kv: true
+  },
+  nitro: {
+    experimental: {
+      openAPI: true
+    }
+  },
   eslint: {
     config: {
       stylistic: {
